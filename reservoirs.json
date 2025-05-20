@@ -1,0 +1,50 @@
+{
+  "Fuensanta": [
+    {
+      "embalse": "Fuensanta",
+      "capacidadHm3": 210,
+      "almacenadoHm3": 56,
+      "porcentaje": 27
+    }
+  ],
+  "Talave": [
+    {
+      "embalse": "Talave",
+      "capacidadHm3": 35,
+      "almacenadoHm3": 18,
+      "porcentaje": 52
+    }
+  ],
+  "Cenajo": [
+    {
+      "embalse": "Cenajo",
+      "capacidadHm3": 437,
+      "almacenadoHm3": 110,
+      "porcentaje": 25
+    }
+  ],
+  "Camarillas": [
+    {
+      "embalse": "Camarillas",
+      "capacidadHm3": 36,
+      "almacenadoHm3": 19,
+      "porcentaje": 52
+    }
+  ],
+  "La Pedrera": [
+    {
+      "embalse": "La Pedrera",
+      "capacidadHm3": 246,
+      "almacenadoHm3": 72,
+      "porcentaje": 29
+    }
+  ],
+  "Resto de embalses": [
+    {
+      "embalse": "Resto de embalses",
+      "capacidadHm3": 176,
+      "almacenadoHm3": 73,
+      "porcentaje": 41
+    }
+  ]
+}
