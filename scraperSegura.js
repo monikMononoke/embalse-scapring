@@ -55,7 +55,7 @@ function scrapeReservoirs() {
         const response = yield axios_1.default.get(url);
         const $ = cheerio.load(response.data);
         const reservoirs = {};
-        $('table.table tbody tr').each((_, row) => {
+        $('table#n0 tbody tr').each((_, row) => {
             const cols = $(row)
                 .find('td')
                 .map((_, el) => $(el).text().trim())

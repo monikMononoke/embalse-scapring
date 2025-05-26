@@ -13,7 +13,7 @@ async function scrapeReservoirs(): Promise<ReservoirsByProvince> {
 
   const reservoirs: ReservoirsByProvince = {};
 
-  $('table.table tbody tr').each((_, row) => {
+  $('table#n0 tbody tr').each((_, row) => {
     const cols = $(row)
       .find('td')
       .map((_, el) => $(el).text().trim())
