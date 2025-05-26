@@ -29,8 +29,8 @@ async function scrapeReservoirs(): Promise<ReservoirsByProvince> {
         porcentaje: parseFloat(percentage.replace(',', '.')),
       };
 
-      if (!reservoirs['Murcia']) reservoirs['Murcia'] = [];
-      reservoirs['Murcia'].push(reservoir);
+      if (!reservoirs[name]) reservoirs[name] = [];
+      reservoirs[name].push(reservoir);
     }
   });
 

@@ -1,71 +1,29 @@
 {
-  "Murcia": [
-    {
-      "embalse": "Fuensanta",
-      "capacidadHm3": 210,
-      "almacenadoHm3": 58,
-      "porcentaje": 28
-    },
-    {
-      "embalse": "Talave",
-      "capacidadHm3": 35,
-      "almacenadoHm3": 21,
-      "porcentaje": 59
-    },
-    {
-      "embalse": "Cenajo",
-      "capacidadHm3": 437,
-      "almacenadoHm3": 114,
-      "porcentaje": 26
-    },
-    {
-      "embalse": "Camarillas",
-      "capacidadHm3": 36,
-      "almacenadoHm3": 22,
-      "porcentaje": 61
-    },
-    {
-      "embalse": "La Pedrera",
-      "capacidadHm3": 246,
-      "almacenadoHm3": 69,
-      "porcentaje": 28
-    },
-    {
-      "embalse": "Resto de embalses",
-      "capacidadHm3": 176,
-      "almacenadoHm3": 72,
-      "porcentaje": 41
-    },
-    {
-      "embalse": "57",
-      "capacidadHm3": 17,
-      "almacenadoHm3": 62,
-      "porcentaje": 14
-    },
-    {
-      "embalse": "47",
-      "capacidadHm3": 18,
-      "almacenadoHm3": 67,
-      "porcentaje": 16
-    },
-    {
-      "embalse": "38",
-      "capacidadHm3": 14,
-      "almacenadoHm3": 59,
-      "porcentaje": 16
-    },
-    {
-      "embalse": "21",
-      "capacidadHm3": 17,
-      "almacenadoHm3": 45,
-      "porcentaje": 13
-    },
+  "14": [
     {
       "embalse": "14",
       "capacidadHm3": 15,
       "almacenadoHm3": 49,
       "porcentaje": 13
-    },
+    }
+  ],
+  "15": [
+    {
+      "embalse": "15",
+      "capacidadHm3": 20,
+      "almacenadoHm3": 88,
+      "porcentaje": 20
+    }
+  ],
+  "16": [
+    {
+      "embalse": "16",
+      "capacidadHm3": 13,
+      "almacenadoHm3": 87,
+      "porcentaje": 16
+    }
+  ],
+  "18": [
     {
       "embalse": "18",
       "capacidadHm3": 16,
@@ -77,31 +35,49 @@
       "capacidadHm3": 23,
       "almacenadoHm3": 74,
       "porcentaje": 19
-    },
-    {
-      "embalse": "15",
-      "capacidadHm3": 20,
-      "almacenadoHm3": 88,
-      "porcentaje": 20
-    },
-    {
-      "embalse": "16",
-      "capacidadHm3": 13,
-      "almacenadoHm3": 87,
-      "porcentaje": 16
-    },
+    }
+  ],
+  "19": [
     {
       "embalse": "19",
       "capacidadHm3": 5,
       "almacenadoHm3": 84,
       "porcentaje": 6
-    },
+    }
+  ],
+  "21": [
+    {
+      "embalse": "21",
+      "capacidadHm3": 17,
+      "almacenadoHm3": 45,
+      "porcentaje": 13
+    }
+  ],
+  "38": [
+    {
+      "embalse": "38",
+      "capacidadHm3": 14,
+      "almacenadoHm3": 59,
+      "porcentaje": 16
+    }
+  ],
+  "45": [
     {
       "embalse": "45",
       "capacidadHm3": 9,
       "almacenadoHm3": 94,
       "porcentaje": 21
-    },
+    }
+  ],
+  "47": [
+    {
+      "embalse": "47",
+      "capacidadHm3": 18,
+      "almacenadoHm3": 67,
+      "porcentaje": 16
+    }
+  ],
+  "53": [
     {
       "embalse": "53",
       "capacidadHm3": 16,
@@ -143,7 +119,9 @@
       "capacidadHm3": 16,
       "almacenadoHm3": 104,
       "porcentaje": 14
-    },
+    }
+  ],
+  "54": [
     {
       "embalse": "54",
       "capacidadHm3": 15,
@@ -167,7 +145,9 @@
       "capacidadHm3": 14,
       "almacenadoHm3": 105,
       "porcentaje": 13
-    },
+    }
+  ],
+  "55": [
     {
       "embalse": "55",
       "capacidadHm3": 14,
@@ -197,7 +177,9 @@
       "capacidadHm3": 16,
       "almacenadoHm3": 108,
       "porcentaje": 15
-    },
+    }
+  ],
+  "56": [
     {
       "embalse": "56",
       "capacidadHm3": 17,
@@ -227,6 +209,14 @@
       "capacidadHm3": 18,
       "almacenadoHm3": 110,
       "porcentaje": 19
+    }
+  ],
+  "57": [
+    {
+      "embalse": "57",
+      "capacidadHm3": 17,
+      "almacenadoHm3": 62,
+      "porcentaje": 14
     },
     {
       "embalse": "57",
@@ -271,24 +261,6 @@
       "porcentaje": 21
     },
     {
-      "embalse": "58",
-      "capacidadHm3": 20,
-      "almacenadoHm3": 113,
-      "porcentaje": 21
-    },
-    {
-      "embalse": "58",
-      "capacidadHm3": 20,
-      "almacenadoHm3": 114,
-      "porcentaje": 22
-    },
-    {
-      "embalse": "58",
-      "capacidadHm3": 21,
-      "almacenadoHm3": 114,
-      "porcentaje": 22
-    },
-    {
       "embalse": "57",
       "capacidadHm3": 19,
       "almacenadoHm3": 111,
@@ -311,6 +283,26 @@
       "capacidadHm3": 20,
       "almacenadoHm3": 113,
       "porcentaje": 21
+    }
+  ],
+  "58": [
+    {
+      "embalse": "58",
+      "capacidadHm3": 20,
+      "almacenadoHm3": 113,
+      "porcentaje": 21
+    },
+    {
+      "embalse": "58",
+      "capacidadHm3": 20,
+      "almacenadoHm3": 114,
+      "porcentaje": 22
+    },
+    {
+      "embalse": "58",
+      "capacidadHm3": 21,
+      "almacenadoHm3": 114,
+      "porcentaje": 22
     },
     {
       "embalse": "58",
@@ -335,12 +327,62 @@
       "capacidadHm3": 21,
       "almacenadoHm3": 114,
       "porcentaje": 22
-    },
+    }
+  ],
+  "210": [
     {
       "embalse": "210",
       "capacidadHm3": 35,
       "almacenadoHm3": 437,
       "porcentaje": 36
+    }
+  ],
+  "Fuensanta": [
+    {
+      "embalse": "Fuensanta",
+      "capacidadHm3": 210,
+      "almacenadoHm3": 58,
+      "porcentaje": 28
+    }
+  ],
+  "Talave": [
+    {
+      "embalse": "Talave",
+      "capacidadHm3": 35,
+      "almacenadoHm3": 21,
+      "porcentaje": 59
+    }
+  ],
+  "Cenajo": [
+    {
+      "embalse": "Cenajo",
+      "capacidadHm3": 437,
+      "almacenadoHm3": 114,
+      "porcentaje": 26
+    }
+  ],
+  "Camarillas": [
+    {
+      "embalse": "Camarillas",
+      "capacidadHm3": 36,
+      "almacenadoHm3": 22,
+      "porcentaje": 61
+    }
+  ],
+  "La Pedrera": [
+    {
+      "embalse": "La Pedrera",
+      "capacidadHm3": 246,
+      "almacenadoHm3": 69,
+      "porcentaje": 28
+    }
+  ],
+  "Resto de embalses": [
+    {
+      "embalse": "Resto de embalses",
+      "capacidadHm3": 176,
+      "almacenadoHm3": 72,
+      "porcentaje": 41
     }
   ]
 }
