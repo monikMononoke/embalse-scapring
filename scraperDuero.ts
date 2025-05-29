@@ -15,21 +15,20 @@ async function scrapeReservoirs(): Promise<ReservoirsByProvince> {
 
   $('table tbody tr').each((_, row) => {
     const $row = $(row);
-    // Detectar provincia
+
     const provinceCell = $row.find('td.system');
     if (provinceCell.length) {
       currentProvince = provinceCell.text().trim();
-      return; // Saltar a la siguiente fila
+      return;
     }
-    // Ignorar filas de subtotal
+
     if ($row.hasClass('subtotal')) return;
 
-    // Detectar embalse
     const $reservoirName = $row
       .find('td.reservoir > a')
       .map((_, el) => $(el).text().trim())
       .get(0);
-    if (!$reservoirName) return; // Si no hay nombre de embalse, saltar
+    if (!$reservoirName) return;
 
     const cols = $row
       .find('td')
