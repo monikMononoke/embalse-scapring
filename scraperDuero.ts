@@ -2,7 +2,7 @@ import axios from 'axios';
 import * as cheerio from 'cheerio';
 import * as fs from 'fs';
 import * as path from 'path';
-import { InterfaceSaihDuero, ReservoirsByProvince } from './interfaceSaihDuero';
+import { InterfaceSaihDuero, ReservoirsByProvince } from './interfaceDuero';
 
 const url = 'https://www.saihduero.es/situacion-embalses';
 
@@ -73,7 +73,7 @@ async function scrapeReservoirs(): Promise<ReservoirsByProvince> {
 }
 
 scrapeReservoirs().then((data) => {
-  const filePath = path.join(__dirname, 'saihDuero.json');
+  const filePath = path.join(__dirname, 'scraperDuero.json');
   fs.writeFileSync(filePath, JSON.stringify(data, null, 2), 'utf-8');
   console.log(`✅ Data saved to: ${filePath}`);
 });

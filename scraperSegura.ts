@@ -2,7 +2,7 @@ import axios from 'axios';
 import * as cheerio from 'cheerio';
 import * as fs from 'fs';
 import * as path from 'path';
-import { ReservoirsByProvince, ReservoirData } from './interfaces';
+import { ReservoirsByProvince, ReservoirData } from './interfaceSegura';
 
 const url =
   'https://chsegura.es/es/cuenca/redes-de-control/estadisticas-hidrologicas/estado-de-embalses/';
@@ -29,8 +29,8 @@ async function scrapeReservoirs(): Promise<ReservoirsByProvince> {
         porcentaje: parseFloat(percentage.replace(',', '.')),
       };
 
-      if (!reservoirs[name]) reservoirs[name] = [];
-      reservoirs[name].push(reservoir);
+      if (!reservoirs['Murcia']) reservoirs['Murcia'] = [];
+      reservoirs['Murcia'].push(reservoir);
     }
   });
 
@@ -38,7 +38,7 @@ async function scrapeReservoirs(): Promise<ReservoirsByProvince> {
 }
 
 scrapeReservoirs().then((data) => {
-  const filePath = path.join(__dirname, 'reservoirs.json');
+  const filePath = path.join(__dirname, 'scraperSegura.json');
   fs.writeFileSync(filePath, JSON.stringify(data, null, 2), 'utf-8');
   console.log(`✅ Data saved to: ${filePath}`);
 });
