@@ -55,9 +55,11 @@
       "averageEntrancem3ByS": "9,9",
       "averageExitm3ByS": "11,9",
       "rainfallYearLbym2": "900,7"
-    },
+    }
+  ],
+  "PALENCIA (SISTEMA CARRIÓN)": [
     {
-      "province": "LEÓN (SISTEMA ESLA Y ÓRBIGO)",
+      "province": "PALENCIA (SISTEMA CARRIÓN)",
       "name": "Camporredondo",
       "capacityHm3": "68,7",
       "currentHm3": "65,7",
@@ -71,7 +73,7 @@
       "rainfallYearLbym2": "1.055,8"
     },
     {
-      "province": "LEÓN (SISTEMA ESLA Y ÓRBIGO)",
+      "province": "PALENCIA (SISTEMA CARRIÓN)",
       "name": "Compuerto",
       "capacityHm3": "94,9",
       "currentHm3": "91,6",
@@ -83,9 +85,11 @@
       "averageEntrancem3ByS": "4,6",
       "averageExitm3ByS": "6,2",
       "rainfallYearLbym2": "969,7"
-    },
+    }
+  ],
+  "PALENCIA (SISTEMA PISUERGA)": [
     {
-      "province": "LEÓN (SISTEMA ESLA Y ÓRBIGO)",
+      "province": "PALENCIA (SISTEMA PISUERGA)",
       "name": "Cervera-Ruesga",
       "capacityHm3": "10,3",
       "currentHm3": "10,3",
@@ -99,7 +103,7 @@
       "rainfallYearLbym2": "863,7"
     },
     {
-      "province": "LEÓN (SISTEMA ESLA Y ÓRBIGO)",
+      "province": "PALENCIA (SISTEMA PISUERGA)",
       "name": "La Requejada",
       "capacityHm3": "58,7",
       "currentHm3": "43,9",
@@ -113,7 +117,7 @@
       "rainfallYearLbym2": "826,6"
     },
     {
-      "province": "LEÓN (SISTEMA ESLA Y ÓRBIGO)",
+      "province": "PALENCIA (SISTEMA PISUERGA)",
       "name": "Aguilar de Campoo",
       "capacityHm3": "247,2",
       "currentHm3": "231,8",
@@ -125,9 +129,11 @@
       "averageEntrancem3ByS": "4,6",
       "averageExitm3ByS": "4,8",
       "rainfallYearLbym2": "529,7"
-    },
+    }
+  ],
+  "BURGOS (SISTEMA ARLANZA)": [
     {
-      "province": "LEÓN (SISTEMA ESLA Y ÓRBIGO)",
+      "province": "BURGOS (SISTEMA ARLANZA)",
       "name": "Arlanzón",
       "capacityHm3": "22,4",
       "currentHm3": "21,7",
@@ -141,7 +147,7 @@
       "rainfallYearLbym2": "760,1"
     },
     {
-      "province": "LEÓN (SISTEMA ESLA Y ÓRBIGO)",
+      "province": "BURGOS (SISTEMA ARLANZA)",
       "name": "Úzquiza",
       "capacityHm3": "74,6",
       "currentHm3": "65,7",
@@ -153,9 +159,11 @@
       "averageEntrancem3ByS": "2,4",
       "averageExitm3ByS": "2,3",
       "rainfallYearLbym2": "593,2"
-    },
+    }
+  ],
+  "SORIA (SISTEMA ALTO DUERO)": [
     {
-      "province": "LEÓN (SISTEMA ESLA Y ÓRBIGO)",
+      "province": "SORIA (SISTEMA ALTO DUERO)",
       "name": "Cuerda del Pozo",
       "capacityHm3": "248,8",
       "currentHm3": "228,1",
@@ -167,9 +175,11 @@
       "averageEntrancem3ByS": "2,3",
       "averageExitm3ByS": "3,8",
       "rainfallYearLbym2": "517,1"
-    },
+    }
+  ],
+  "SEGOVIA (SISTEMA RIAZA-DURATÓN Y CEGA-ERESMA-ADAJA)": [
     {
-      "province": "LEÓN (SISTEMA ESLA Y ÓRBIGO)",
+      "province": "SEGOVIA (SISTEMA RIAZA-DURATÓN Y CEGA-ERESMA-ADAJA)",
       "name": "Linares del Arroyo",
       "capacityHm3": "54,4",
       "currentHm3": "48,7",
@@ -183,7 +193,7 @@
       "rainfallYearLbym2": "332,2"
     },
     {
-      "province": "LEÓN (SISTEMA ESLA Y ÓRBIGO)",
+      "province": "SEGOVIA (SISTEMA RIAZA-DURATÓN Y CEGA-ERESMA-ADAJA)",
       "name": "El Pontón Alto",
       "capacityHm3": "7,3",
       "currentHm3": "7,3",
@@ -195,9 +205,11 @@
       "averageEntrancem3ByS": "3,4",
       "averageExitm3ByS": "3,2",
       "rainfallYearLbym2": "337,0"
-    },
+    }
+  ],
+  "ÁVILA (SISTEMA CEGA-ERESMA-ADAJA)": [
     {
-      "province": "LEÓN (SISTEMA ESLA Y ÓRBIGO)",
+      "province": "ÁVILA (SISTEMA CEGA-ERESMA-ADAJA)",
       "name": "Castro de las Cogotas",
       "capacityHm3": "58,2",
       "currentHm3": "58,1",
@@ -209,9 +221,11 @@
       "averageEntrancem3ByS": "3,8",
       "averageExitm3ByS": "3,8",
       "rainfallYearLbym2": "408,6"
-    },
+    }
+  ],
+  "SALAMANCA (SISTEMA TORMES)": [
     {
-      "province": "LEÓN (SISTEMA ESLA Y ÓRBIGO)",
+      "province": "SALAMANCA (SISTEMA TORMES)",
       "name": "Santa Teresa",
       "capacityHm3": "496,1",
       "currentHm3": "456,1",
@@ -223,9 +237,11 @@
       "averageEntrancem3ByS": "24,8",
       "averageExitm3ByS": "19,2",
       "rainfallYearLbym2": "897,6"
-    },
+    }
+  ],
+  "SALAMANCA (SISTEMA ÁGUEDA)": [
     {
-      "province": "LEÓN (SISTEMA ESLA Y ÓRBIGO)",
+      "province": "SALAMANCA (SISTEMA ÁGUEDA)",
       "name": "Irueña",
       "capacityHm3": "110,0",
       "currentHm3": "59,3",
@@ -239,7 +255,7 @@
       "rainfallYearLbym2": "719,8"
     },
     {
-      "province": "LEÓN (SISTEMA ESLA Y ÓRBIGO)",
+      "province": "SALAMANCA (SISTEMA ÁGUEDA)",
       "name": "Águeda",
       "capacityHm3": "15,4",
       "currentHm3": "11,1",

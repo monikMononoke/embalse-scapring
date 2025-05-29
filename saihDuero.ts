@@ -11,24 +11,30 @@ async function scrapeReservoirs(): Promise<ReservoirsByProvince> {
   const $ = cheerio.load(response.data);
 
   const reservoirs: ReservoirsByProvince = {};
-  const $province = $('table tbody tr')
-    .find('td.system')
-    .map((_, el) => $(el).text().trim())
-    .get(0);
+  let currentProvince = '';
 
   $('table tbody tr').each((_, row) => {
-    const $reservoirName = $(row)
+    const $row = $(row);
+    // Detectar provincia
+    const provinceCell = $row.find('td.system');
+    if (provinceCell.length) {
+      currentProvince = provinceCell.text().trim();
+      return; // Saltar a la siguiente fila
+    }
+    // Ignorar filas de subtotal
+    if ($row.hasClass('subtotal')) return;
+
+    // Detectar embalse
+    const $reservoirName = $row
       .find('td.reservoir > a')
       .map((_, el) => $(el).text().trim())
       .get(0);
+    if (!$reservoirName) return; // Si no hay nombre de embalse, saltar
 
-    const cols = $(row)
+    const cols = $row
       .find('td')
       .map((_, el) => $(el).text().trim())
       .get();
-
-    console.log($.html(row));
-
     if (cols.length >= 11) {
       const [
         name = $reservoirName,
@@ -45,7 +51,7 @@ async function scrapeReservoirs(): Promise<ReservoirsByProvince> {
       ] = cols;
 
       const reservoir: InterfaceSaihDuero = {
-        province: $province,
+        province: currentProvince,
         name: name,
         capacityHm3: capacity,
         currentHm3: current,
@@ -59,8 +65,8 @@ async function scrapeReservoirs(): Promise<ReservoirsByProvince> {
         rainfallYearLbym2: rainfallYear,
       };
 
-      if (!reservoirs[$province]) reservoirs[$province] = [];
-      reservoirs[$province].push(reservoir);
+      if (!reservoirs[currentProvince]) reservoirs[currentProvince] = [];
+      reservoirs[currentProvince].push(reservoir);
     }
   });
   return reservoirs;
