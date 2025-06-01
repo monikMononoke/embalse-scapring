@@ -10,23 +10,23 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 import puppeteer from 'puppeteer';
 import fs from 'fs';
 (() => __awaiter(void 0, void 0, void 0, function* () {
-    const browser = yield puppeteer.launch({ headless: false });
+    const browser = yield puppeteer.launch({ headless: true });
     const page = yield browser.newPage();
     // 1. Cargar la web
     yield page.goto('https://visor.saichcantabrico.es/', {
         waitUntil: 'networkidle0',
     });
     // 2. Hacer clic en el icono de embalses
-    yield page.waitForSelector('a#embalses > div.icono-lateral-nivel > img.iconos-menu-cambio');
-    yield page.click('a#embalses > div.icono-lateral-nivel > img.iconos-menu-cambio');
+    yield page.waitForSelector('div#menu-embalses a#embalses div.icono-lateral-nivel img.iconos-menu-cambio');
+    yield page.click('div#menu-embalses a#embalses div.icono-lateral-nivel img.iconos-menu-cambio');
     // 3. Hacer clic en "Ver tabla de datos"
-    yield page.waitForSelector('div[title="Ver tabla de datos"] > a.texto-mostrar-tabla');
-    yield page.click('div[title="Ver tabla de datos"] > a.texto-mostrar-tabla');
+    yield page.waitForSelector(' a.texto-mostrar-tabla');
+    yield page.click(' a.texto-mostrar-tabla');
     // 4. Esperar a que cargue la tabla
-    yield page.waitForSelector('table tbody');
+    yield page.waitForSelector('div.contenedor-tabla > table#tabla-datos tbody');
     // 5. Extraer datos de la tabla
     const data = yield page.evaluate(() => {
-        const rows = Array.from(document.querySelectorAll('table tbody tr'));
+        const rows = Array.from(document.querySelectorAll('table tbody tr.es_fila_embalse'));
         return rows.map((row) => {
             const cells = Array.from(row.querySelectorAll('td'));
             return cells.map((cell) => cell.innerText.trim());

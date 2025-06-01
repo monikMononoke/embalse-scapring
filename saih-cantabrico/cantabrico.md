@@ -10,17 +10,15 @@
 
 ```js
 await page.waitForSelector(
-  'a#embalses > div.icono-lateral-nivel > img.iconos-menu-cambio'
+  'div#menu-embalses a#embalses div.icono-lateral-nivel img.iconos-menu-cambio'
 );
 await page.click(
-  'a#embalses > div.icono-lateral-nivel > img.iconos-menu-cambio'
+  'div#menu-embalses a#embalses div.icono-lateral-nivel img.iconos-menu-cambio'
 );
 
 // 3. Hacer clic en "Ver tabla de datos"
-await page.waitForSelector(
-  'div[title="Ver tabla de datos"] > a.texto-mostrar-tabla'
-);
-await page.click('div[title="Ver tabla de datos"] > a.texto-mostrar-tabla');
+await page.waitForSelector(' a.texto-mostrar-tabla');
+await page.click(' a.texto-mostrar-tabla');
 ```
 
 - WaitForSelector: table tbody (there are several trs in each section) Good luck!
