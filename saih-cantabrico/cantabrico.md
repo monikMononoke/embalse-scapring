@@ -6,10 +6,21 @@
 
 - url after clicking: https://visor.saichcantabrico.es/
 
-- Find: a#embalses > div.icono-lateral-nivel > img.iconos-menu-cambio
+- Find the link with id 'embalses':
 
-  - I don't know if find() needs that much specificity
+```js
+await page.waitForSelector(
+  'a#embalses > div.icono-lateral-nivel > img.iconos-menu-cambio'
+);
+await page.click(
+  'a#embalses > div.icono-lateral-nivel > img.iconos-menu-cambio'
+);
 
-- Find: div.icono-tabla || div["title"="Ver tabla de datos"]
+// 3. Hacer clic en "Ver tabla de datos"
+await page.waitForSelector(
+  'div[title="Ver tabla de datos"] > a.texto-mostrar-tabla'
+);
+await page.click('div[title="Ver tabla de datos"] > a.texto-mostrar-tabla');
+```
 
-- Find: table tbody (there are several trs in each section) Good luck!
+- WaitForSelector: table tbody (there are several trs in each section) Good luck!
