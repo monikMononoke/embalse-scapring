@@ -1,7 +1,8 @@
 import puppeteer from 'puppeteer';
 import fs from 'fs';
+import { ZonaHidrologica } from './interfaceCantabrico';
 
-(async () => {
+async function scrapeCantabrico(): Promise<ZonaHidrologica> {
   const browser = await puppeteer.launch({ headless: true });
   const page = await browser.newPage();
 
@@ -26,18 +27,85 @@ import fs from 'fs';
   await page.waitForSelector('div.contenedor-tabla > table#tabla-datos tbody');
 
   // 5. Extraer datos de la tabla
-  const data = await page.evaluate(() => {
+  const zonasHidrologicas = await page.evaluate(() => {
+    const zonasHidrologicas: { [key: string]: any[] } = {};
     const rows = Array.from(
       document.querySelectorAll('table tbody tr.es_fila_embalse')
     );
-    return rows.map((row) => {
-      const cells = Array.from(row.querySelectorAll('td'));
-      return cells.map((cell) => cell.innerText.trim());
+
+    let currentZonaHidrologica = '';
+
+    rows.forEach((row) => {
+      // Buscar la celda de zona hidrológica
+      // Si no existe, usar la última zona hidrológica conocida
+      const zonaCell = row.querySelector('td.font-sistema');
+      let zonaHidrologica = zonaCell
+        ? zonaCell.textContent?.trim() || ''
+        : currentZonaHidrologica;
+      if (zonaCell) currentZonaHidrologica = zonaHidrologica;
+
+      const cols = Array.from(row.querySelectorAll('td'));
+      // Saltar la celda de zona si existe (por rowspan puede no estar)
+      const posicionInicial = zonaCell ? 1 : 0;
+
+      const [
+        id,
+        rio,
+        embalse,
+        nivel,
+        nivelMaximo,
+        resguardoNivel,
+        volumen,
+        volumenTotalHm3,
+        ResguardoVolumenHm3,
+        porcentajeLLenado,
+        husoMax,
+        husoMin,
+        fechaActualizacion,
+      ] = cols
+        .slice(posicionInicial)
+        .map((col) => col.textContent?.trim() || '');
+
+      function safeParseFloat(value: string) {
+        if (!value || value === '-') return null;
+        return parseFloat(value.replace(',', '.'));
+      }
+      function safeParseInt(value: string) {
+        if (!value || value === '-') return null;
+        return parseInt(value, 10);
+      }
+
+      const reservoir = {
+        id: safeParseInt(id),
+        rio,
+        embalse: embalse,
+        nivel: safeParseFloat(nivel),
+        nivelMaximo: safeParseFloat(nivelMaximo),
+        resguardoNivel: safeParseFloat(resguardoNivel),
+        volumen: safeParseFloat(volumen),
+        volumenTotalHm3: safeParseFloat(volumenTotalHm3),
+        ResguardoVolumenHm3: safeParseFloat(ResguardoVolumenHm3),
+        porcentajeLLenado: safeParseFloat(porcentajeLLenado),
+        husoMax: safeParseInt(husoMax),
+        husoMin: safeParseInt(husoMin),
+        fechaActualizacion,
+      };
+      if (!zonasHidrologicas[zonaHidrologica])
+        zonasHidrologicas[zonaHidrologica] = [];
+      zonasHidrologicas[zonaHidrologica].push(reservoir);
     });
+    return zonasHidrologicas;
   });
+  await browser.close();
+  return zonasHidrologicas;
+}
 
-  // 6. Guardar como JSON
-  fs.writeFileSync('tabla_embalses.json', JSON.stringify(data, null, 2));
+scrapeCantabrico()
+  .then((data) => {
+    fs.writeFileSync('tabla_embalses.json', JSON.stringify(data, null, 2));
 
-  console.log('Datos guardados en tabla_embalses.json');
-})();
+    console.log('Datos guardados en tabla_embalses.json');
+  })
+  .catch((error) => {
+    console.error('Error al extraer los datos:', error);
+  });
